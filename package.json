@@ -1,0 +1,16 @@
+{
+  "name": "makan-webrtc-infrastructure",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone Makan WebRTC diagnostic page and infrastructure tools",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "prepare:sdk": "node scripts/prepare-sdk.cjs"
+  },
+  "dependencies": {
+    "livekit-client": "2.23.0"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

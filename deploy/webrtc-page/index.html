@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>ماکان | آزمایش مستقل WebRTC</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<main>
+<header><span class="brand">MAKAN · WebRTC</span><span class="badge">آزمایش زیرساخت</span></header>
+<h1>اتصال واقعی صدا و تصویر</h1>
+<p class="intro">این صفحه برای آزمایش مستقل سرور رسانه است. برای تماس، دو لینک اختصاصی یک اتاق را روی دو دستگاه باز کنید.</p>
+<section class="panel" id="setup">
+<label for="token">توکن دعوت</label>
+<textarea id="token" rows="3" dir="ltr" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="توکن از لینک دعوت خوانده می‌شود؛ یا آن را اینجا وارد کنید."></textarea>
+<div class="options"><label for="source">رسانهٔ آزمایش</label><select id="source"><option value="synthetic">صدا و تصویر مصنوعی (بدون میکروفون و دوربین)</option><option value="devices">میکروفون و دوربین دستگاه</option><option value="audio">فقط میکروفون دستگاه</option></select></div>
+<div class="actions"><button id="join">اتصال به اتاق</button><button id="leave" class="secondary" disabled>پایان و خروج</button><button id="mute" class="secondary" disabled>قطع میکروفون</button></div>
+<p class="hint">در حالت دستگاه، مرورگر اجازهٔ دسترسی می‌خواهد. برای شنیدن صدا از هدفون استفاده کنید. در حالت مصنوعی صدای آزمایشی ضعیفی پخش می‌شود.</p>
+</section>
+<section class="status panel" aria-live="polite"><span id="lamp"></span><strong id="status">آمادهٔ ورود</strong><p id="detail">ورود بدون توکن معتبر امکان‌پذیر نیست.</p><p id="stats" dir="ltr">Audio: 0 bytes · Video: 0 frames</p></section>
+<section class="media"><div class="panel"><h2>تصویر شما</h2><div id="local" class="video-box"><span>پس از اتصال نمایش داده می‌شود</span></div></div><div class="panel"><h2>طرف مقابل</h2><div id="remote" class="video-box"><span>منتظر نفر دوم</span></div></div></section>
+<details class="panel"><summary>روش ساخت دعوت و تست</summary><ol><li>از طریق SSH وارد سرور شوید و دستور زیر را اجرا کنید.</li><li>برای هر نفر یکی از دو لینک خروجی را باز کنید. لینک‌ها خصوصی و برای ورود اولیه ۱۰ دقیقه معتبرند.</li><li>ابتدا با رسانهٔ مصنوعی تست کنید؛ سپس در دو دستگاه و دو شبکهٔ مستقل، میکروفون و دوربین را آزمایش کنید.</li><li>افزایش شمارندهٔ صدا و فریم تصویر نشان می‌دهد رسانه دریافت می‌شود.</li></ol><pre dir="ltr">sudo /usr/local/sbin/makan-webrtc-invite</pre><p class="hint">این صفحه به حساب کاربری ماکان متصل نیست. صدور دعوت فقط در اختیار مدیر SSH است. پایان اعتبار توکن، کاربر متصل را خودکار از اتاق بیرون نمی‌اندازد؛ برای پایان، خروج را بزنید.</p></details>
+<footer><span>LiveKit · TLS · TURN</span><span>سرور رسانه: <bdi>195.177.255.98:8443</bdi></span></footer>
+</main>
+</body></html>

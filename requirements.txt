@@ -1,0 +1,7 @@
+# وابستگی‌های ابزارهای SSH و آزمون رسانه؛ با Python محیط اجرا نصب شوند.
+aiohttp
+paramiko
+PyYAML
+protobuf
+livekit
+livekit-api

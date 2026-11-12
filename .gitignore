@@ -1,0 +1,56 @@
+# فقط فایل‌های اصلی این پروژه در ریشه وارد مخزن می‌شوند.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/package.json
+!/package-lock.json
+!/requirements.txt
+!/deploy/
+!/scripts/
+
+# نسخه‌های محلی پروژه‌های دیگر و خروجی‌های اجرای ابزارها
+/repos/
+/output/
+/tmp/
+**/node_modules/
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+**/[Bb]in/
+**/[Oo]bj/
+**/.artifacts/
+**/TestResults/
+*.log
+*.trx
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# اطلاعات محرمانه و تنظیمات شخصی
+**/.env
+**/.env.*
+!**/.env.example
+**/keys.yaml
+**/keys.yml
+**/secrets.yaml
+**/secrets.yml
+**/secrets.json
+*.pem
+*.key
+*.p12
+*.pfx
+**/.ssh/
+**/.vscode/
+**/.idea/
+
+# کتابخانه و مجوز همراه، از وابستگی قفل‌شده تولید می‌شوند.
+/deploy/webrtc-page/livekit-client.*.js
+/deploy/webrtc-page/SDK-LICENSE
+
+# فقط همین دو سند نهایی مجازند.
+*.pdf
+!/Makan_Implementation_Guide_FA.pdf
+!/Makan_Backend_WebRTC_Connection_FA.pdf
